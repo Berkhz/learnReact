@@ -1,9 +1,16 @@
-import styles from './styles.module.css'
+import React from 'react';
+import styles from './Header.module.css';
 
 interface HeaderProps {
     titulo: string;
 }
 
-function Header({titulo}): HeaderProps {
-    return <header className={styles.header}>titulo</header>
-}
+const Header: React.FC<HeaderProps> = ({ titulo }) => {
+    return (
+        <header className={styles.header}>
+            {titulo}
+        </header>
+    );
+};
+
+export default Header;
